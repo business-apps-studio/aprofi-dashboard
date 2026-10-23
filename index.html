@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <title>А.Профи — реклама</title>
+  <style>
+    *{box-sizing:border-box}html,body{margin:0;height:100%;font:14px Arial,sans-serif;background:#f4f7f6;color:#17343f}
+    body{display:flex;flex-direction:column}header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 18px;background:#16343e;color:#fff}
+    strong{font-size:16px}nav{display:flex;align-items:center;gap:14px}a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+    button{border:1px solid #9ac4bc;background:transparent;color:#fff;border-radius:7px;padding:7px 12px;cursor:pointer}
+    iframe{display:block;flex:1;width:100%;min-height:300px;border:0;background:#f4f7f6}
+    details{padding:8px 18px;background:#e8f0ed;font-size:13px}summary{cursor:pointer}p{line-height:1.5;max-width:850px}
+    @media(max-width:600px){header{padding:10px;align-items:flex-start}nav{flex-wrap:wrap;justify-content:flex-end;gap:8px}strong{white-space:nowrap}}
+  </style>
+</head>
+<body>
+  <header>
+    <strong>А.Профи · Реклама</strong>
+    <nav aria-label="Управление приложением">
+      <button type="button" id="reload">Перезагрузить</button>
+      <a id="direct" href="https://script.google.com/macros/s/AKfycbwAtFNqpmN_LcwZn97v1ZIBBHsTsnJZFq0ssAtvOUFbBvg5gvdUNmU3A5RexQkXeQbt/exec" target="_blank" rel="noopener noreferrer">Открыть отдельно ↗</a>
+    </nav>
+  </header>
+  <details>
+    <summary>Если дашборд не открывается</summary>
+    <p>Нажмите «Открыть отдельно» и войдите в Google под аккаунтом, которому предоставлен доступ к таблице. После этого вернитесь сюда и нажмите «Перезагрузить». Если браузер блокирует вход во встроенном окне, пользуйтесь прямой ссылкой.</p>
+    <p>Оболочка не предоставляет доступ к таблице. Для встроенного просмотра в Apps Script должно быть разрешено встраивание и опубликована обновлённая версия. Отображение служебной плашки зависит от Google; страница не обрезает и не перекрывает её.</p>
+  </details>
+  <iframe id="dashboard" title="Дашборд эффективности рекламы А.Профи" src="https://script.google.com/macros/s/AKfycbwAtFNqpmN_LcwZn97v1ZIBBHsTsnJZFq0ssAtvOUFbBvg5gvdUNmU3A5RexQkXeQbt/exec" referrerpolicy="no-referrer" allow="fullscreen"></iframe>
+  <noscript>Для работы дашборда включите JavaScript в браузере.</noscript>
+  <script>
+    document.getElementById('reload').addEventListener('click',function(){
+      document.getElementById('dashboard').src=document.getElementById('direct').href;
+    });
+  </script>
+</body>
+</html>
